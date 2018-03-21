@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gjg.iml" filepath="$PROJECT_DIR$/.idea/modules/gjg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gjg_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gjg_main.iml" group="gjg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gjg_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gjg_test.iml" group="gjg" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/systemapi.iml" filepath="$PROJECT_DIR$/.idea/modules/systemapi.iml" group="systemapi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/systemapi/systemapi_main.iml" filepath="$PROJECT_DIR$/.idea/modules/systemapi/systemapi_main.iml" group="systemapi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/systemapi/systemapi_test.iml" filepath="$PROJECT_DIR$/.idea/modules/systemapi/systemapi_test.iml" group="systemapi" />
+    </modules>
+  </component>
+</project>
