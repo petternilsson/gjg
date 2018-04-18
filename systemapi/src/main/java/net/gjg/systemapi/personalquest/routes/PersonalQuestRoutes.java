@@ -5,6 +5,7 @@ import net.gjg.systemapi.GjgApplication;
 import net.gjg.systemapi.personalquest.model.PersonalQuest;
 import net.gjg.systemapi.personalquest.service.PersonalQuestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
@@ -21,7 +22,7 @@ import java.util.stream.Collector;
 @RequestMapping(value = GjgApplication.API_V1)
 public class PersonalQuestRoutes {
 
-    private final static String ENDPOINT = "/personalquests";
+    private static final String ENDPOINT = "/personalquests";
 
     @Autowired
     private PersonalQuestService service;
@@ -47,9 +48,13 @@ public class PersonalQuestRoutes {
     @ApiOperation(value = "Get the image representation of a personal quest",
             nickname = "Get the image representation of a personal quest",
             notes = "Will return the image representation of a personal quest")
-    @GetMapping(ENDPOINT + "/{id}" + ".png")
+    @RequestMapping(
+            value = ENDPOINT + "/{id}" + ".png",
+            method = RequestMethod.GET,
+            produces = MediaType.IMAGE_PNG_VALUE
+    )
     @ResponseBody
-    public List<byte[]> getPersonalQuestImage(@PathVariable Long id) {
+    public byte[] getPersonalQuestImage(@PathVariable Long id) {
         return service.getPersonalQuestImage(id);
     }
 
